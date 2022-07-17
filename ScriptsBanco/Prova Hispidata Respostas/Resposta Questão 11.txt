@@ -1,0 +1,5 @@
+--Resposta questão 11
+Select id_Empregado as NumeroEmpregado, nm_Empregado as NomeEmpregado
+From Empregados
+Where cod_Departamento = 1
+    and nm_Empregado like '%T%'

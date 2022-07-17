@@ -1,0 +1,24 @@
+
+insert into funcaoempregado values(2)
+
+SELECT * FROM Departamentos
+insert into Departamentos values((Select max(ID_Departamento) + 1 from Departamentos), 'SETOR GERAL', 'X');
+insert into Departamentos values((Select max(ID_Departamento) + 1 from Departamentos), 'RH', null);
+insert into Departamentos values((Select max(ID_Departamento) + 1 from Departamentos), 'CONTABILIDADE', null);
+insert into Departamentos values((Select max(ID_Departamento) + 1 from Departamentos), 'TRIBUTOS', null);
+insert into Departamentos values((Select max(ID_Departamento) + 1 from Departamentos), 'SAÚDE', null);
+
+
+
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 1), DEFAULT, 'MICHELLE FRANCA', DEFAULT, '2022-07-17', '1500.00', '750.00')
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 2), DEFAULT, 'SILVIA REGINA', DEFAULT, '2022-07-17', '1500.00', '750.00')
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 3), DEFAULT, 'MAURICIO DE SOUZA', DEFAULT, '2022-07-17', '1500.00', '750.00')
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 4), DEFAULT, 'JOAO FRANCO APOLINARIO', DEFAULT, '2022-07-17', '1500.00', '750.00')
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 5), DEFAULT, 'YURI BORGES', DEFAULT, '2022-07-17', '1500.00', '750.00')
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 1), DEFAULT, 'MARCELO', DEFAULT, '2022-07-17', '1500.00', '750.00')
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 1), DEFAULT, 'JOAO TONEY', DEFAULT, '2022-07-17', '1500.00', '750.00')
+
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 8), DEFAULT, 'JOAO MIGUEL', DEFAULT, '2022-07-17', '1500.00', '750.00')
+Insert into Empregados Values((Select max(id_empregado) + 1 from Empregados), (Select ID_Departamento from Departamentos where id_departamento = 8), DEFAULT, 'JANAINA PASTA', DEFAULT, '2022-07-17', '1500.00', '750.00')
+
+

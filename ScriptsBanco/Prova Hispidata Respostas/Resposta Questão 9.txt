@@ -1,0 +1,4 @@
+--Resposta questão 9
+
+Select nm_Empregado, nm_Funcao, Data_Admissao from empregados 
+order by Salario desc

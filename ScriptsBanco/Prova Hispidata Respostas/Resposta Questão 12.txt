@@ -1,0 +1,6 @@
+Select a.nm_empregado, b.nm_Departamento, b.local
+from Empregados as a
+Inner Join Departamentos as b on a.cod_Departamento = id_Departamento
+where (DATE_PART('Year', CURRENT_DATE:: date) - DATE_PART('Year', a.data_admissao:: date)) >= 5
+and a.nm_funcao = 'Gerente'
+and salario > (Select min(Salario) from Empregados where nm_funcao = 'Gerente')

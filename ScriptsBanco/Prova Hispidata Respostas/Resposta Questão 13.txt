@@ -1,0 +1,6 @@
+Select Sum(a.Salario) as SalariosSomados, b.nm_Departamento,  a.nm_Funcao
+from Empregados as a
+Inner Join Departamentos as b on a.cod_Departamento = id_Departamento
+where (DATE_PART('Year', CURRENT_DATE:: date) - DATE_PART('Year', a.data_admissao:: date)) >= 1
+and b.local = 'Porto Alegre'
+Group by b.nm_Departamento, a.nm_Funcao

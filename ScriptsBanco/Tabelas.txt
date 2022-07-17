@@ -1,0 +1,33 @@
+------------------------------------------------------------------------------
+-- Criando banco de dados via PostGreeSQL
+
+
+CREATE DATABASE db_MV;
+
+CREATE TABLE Departamentos
+(id_Departamento INTEGER NOT NULL, 
+ nm_Departamento VARCHAR(100), 
+ local           VARCHAR(100), 
+ PRIMARY KEY(id_Departamento));
+ 
+
+CREATE TABLE FuncaoEmpregado
+(cd_funcao INTEGER
+ PRIMARY KEY NOT NULL);
+
+CREATE TABLE Empregados
+(id_Empregado     INTEGER NOT NULL, 
+ cod_Departamento INTEGER NOT NULL, 
+ cod_emp_funcao   INTEGER NOT NULL DEFAULT 1, 
+ nm_empregado     VARCHAR(100), 
+ nm_Funcao        VARCHAR(100) DEFAULT 'MV - HOSPITADATA',
+ Data_admissao    DATE, 
+ Salario          NUMERIC(92, 5), 
+ Comissao         NUMERIC(92, 5), 
+ PRIMARY KEY(id_Empregado), 
+ FOREIGN KEY(cod_Departamento) REFERENCES Departamentos(id_Departamento), 
+ FOREIGN KEY(cod_emp_funcao) REFERENCES FuncaoEmpregado(cd_funcao));
+  
+  
+------------------------------------------------------------------------------  
+

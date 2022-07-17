@@ -1,0 +1,3 @@
+Select nm_Empregado, Data_Admissao from empregados 
+where cod_Departamento = (Select cod_Departamento from Empregados where UPPER(nm_Empregado) = 'MARCELO')
+ AND NOT id_Empregado = (Select id_Empregado from Empregados where UPPER(nm_Empregado) = 'MARCELO')

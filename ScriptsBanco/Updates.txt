@@ -1,0 +1,3 @@
+update Empregados set cod_emp_funcao = 2, nm_funcao = 'Gerente' where id_empregado in(11,12)
+update empregados set salario = 250.00 where id_empregado = 12
+
